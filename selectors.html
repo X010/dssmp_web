@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style type="text/css">
+        /*群组选择器*/
+        span, [title], div {
+            color: blue;
+        }
+        /*后代选择器*/
+        .descendantSelectors span {
+            color: red;
+        }
+        .descendantSelectors div p {
+            color: blue;
+        }
+        /*子选择器*/
+        div>p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>群组选择器</div>
+<p title="">群组选择器</p>
+<span>群组选择器</span>
+<div class="descendantSelectors">
+    <div>
+        <p>文本内容01</p>
+    </div>
+    <span>文本内容02</span>
+</div>
+<div>
+    <p>文本内容01</p>
+</div>
+</body>
+</html>

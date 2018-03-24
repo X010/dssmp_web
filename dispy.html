@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏与展示</title>
+    <style type="text/css">
+        #ET {
+            width: 200px;
+            height: 200px;
+            background-color: #0f0f0f;
+            display: block;
+        }
+
+        #ET2 {
+            width: 200px;
+            height: 200px;
+            background-color: #0f0f0f;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<button type="button" onclick="javascript:etf()">ET隐藏/展示</button>
+<div id="ET">
+    看不见
+</div>
+<button type="button" onclick="javascript:etf2()">ET2隐藏/展示</button>
+<div id="ET2">
+    看不见
+</div>
+上面有东西
+<script type="application/javascript">
+    function etf() {
+        var et = document.getElementById("ET");
+        if (et.style.display == 'block' || et.style.display == '' || et.style.display == 'undefined') {
+            et.style.display = 'none';
+        } else {
+            et.style.display = 'block';
+        }
+    }
+    function etf2() {
+        var et = document.getElementById("ET2");
+        if (et.style.visibility == 'visible' || et.style.visibility == '' || et.style.visibility == 'undefined') {
+            et.style.visibility = 'hidden';
+        } else {
+            et.style.visibility = 'visible';
+        }
+    }
+</script>
+</body>
+</html>
